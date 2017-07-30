@@ -13,12 +13,12 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         Player *player1 = [Player new];
-        NSLog(@"roll?");
+        InputHandler *inputHandler = [InputHandler new];
+        
         
         
         while (YES) {
-            
-            InputHandler *inputHandler = [InputHandler new];
+            NSLog(@"roll?");
             if ([[inputHandler giveMeUserInput] isEqualToString:@"roll"]) {
                 [player1 roll];
             

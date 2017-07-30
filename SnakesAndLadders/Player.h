@@ -12,7 +12,8 @@
 
 @property NSInteger currentSquare;
 @property NSDictionary *gameLogic;
-@property NSString *output;
+//@property NSString *output;
+//@property BOOL gameover;
 
 -(void)roll;
 
