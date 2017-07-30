@@ -22,6 +22,7 @@ int main(int argc, const char * argv[]) {
             if ([[inputHandler giveMeUserInput] isEqualToString:@"roll"]) {
                 [player1 roll];
             
+                
         }
         
     
