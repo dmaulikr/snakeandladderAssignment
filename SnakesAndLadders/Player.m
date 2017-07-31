@@ -12,20 +12,20 @@
 
 -(void)roll{
     NSInteger integer = arc4random_uniform(6) + 1;
-    NSLog(@"you rolled: %li",(long)integer);
+    NSLog(@"you rolled:%li",integer);
     
     _currentSquare += integer;
-    NSLog(@"your currentsquare is : %li",_currentSquare);
+    _output = [NSString stringWithFormat:@"your currentsquare is : %li",_currentSquare];
     NSNumber *currentNumber = [NSNumber numberWithInteger:_currentSquare];
     
     if (_gameLogic[currentNumber]){
         _currentSquare = [_gameLogic[currentNumber]intValue];
-        NSLog(@"special square. moving to %ld", _currentSquare);
+        _output = [NSString stringWithFormat:@"special square. moving to %ld", _currentSquare];
     }
     
     if (_currentSquare >= 100) {
         _gameover = YES;
-        NSLog(@"gg you won");
+        _output = @"gg you won";
     }
 
     

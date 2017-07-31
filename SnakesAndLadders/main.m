@@ -21,6 +21,7 @@ int main(int argc, const char * argv[]) {
             NSLog(@"roll?");
             if ([[inputHandler giveMeUserInput] isEqualToString:@"roll"]) {
                 [player1 roll];
+                NSLog(@"%@",player1.output);
             
                 
         }
